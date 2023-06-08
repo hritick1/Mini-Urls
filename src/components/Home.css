@@ -60,3 +60,11 @@
    justify-content: space-between;
    border-radius: .3rem;
 }
+
+.analytics{
+   margin-left: 60rem;
+   background-color: white;
+   color: #1f354c;
+   border-radius: .4rem;
+   font-weight: 500;
+}
