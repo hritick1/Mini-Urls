@@ -23,7 +23,7 @@ const Home = () => {
        else{
         let response=null;
         if(!isCustom)
-        response= await axios.post("http://localhost:3001/short",longUrl);
+        response= await axios.post("https://shrt-jivs.onrender.com/short",longUrl);
         else
         response= await axios.post("https://shrt-jivs.onrender.com/custom",customUrl);
         console.log(response);

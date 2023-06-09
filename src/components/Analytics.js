@@ -9,7 +9,7 @@ const Analytics = () => {
 
     useEffect(() => {
       const getAllUrls=async()=>{
-        const response=await axios.get("http://localhost:3001");
+        const response=await axios.get("https://shrt-jivs.onrender.com");
         console.log(response.data);
         setUrls(response.data);
         console.log(urls);      }
