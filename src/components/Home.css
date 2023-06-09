@@ -48,11 +48,14 @@
 .btn button{
     margin: .5rem;
 }
+.btn{
+    display: flex;
+}
 
 .link{
     background-color: #1f354c;
     color: white;
-    width: 31.25rem;
+    width: 33.125rem;
     height: 3rem;
     margin-top: .5rem;
     display: flex;
@@ -68,3 +71,49 @@
    border-radius: .4rem;
    font-weight: 500;
 }
+@media (max-width:800px) {
+    .container{
+    justify-content: center;
+    }
+html{
+    font-size: 80%;
+}
+
+}
+@media (max-width:660px) {
+    html{
+        font-size: 70%;
+    }
+    .box{
+        justify-content: center;
+        height: 25rem;
+    }
+    
+    }
+@media (max-width:576px) {
+        html{
+            font-size: 50%;
+        }
+        }
+        @media (max-width:420px) {
+            html{
+                font-size: 40%;
+            }
+            .btn{
+                display: flex;
+                flex-direction: column;
+                height: 35rem;
+                justify-content: center;
+            }
+            }
+
+            @media (max-width:325px) {
+                html{
+                    font-size: 30%;
+                }
+                
+                }
+
+
+
+    

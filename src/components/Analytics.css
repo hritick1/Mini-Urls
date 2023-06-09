@@ -19,7 +19,8 @@
     background-color: aliceblue;
     width: 40rem;
     display: flex;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding: .35rem;
     justify-content: space-between;
     border-radius: .6rem;

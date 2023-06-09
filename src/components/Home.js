@@ -76,7 +76,10 @@ const Home = () => {
 
        <div className='box'>
         <div id='head'>Lets Get Links Shortened</div>
-       <TextField label="Paste Long Url" sx={{width: 530}} required  variant='filled' type='text' name='longUrl' value={longUrl.longUrl} onChange={(e)=>handleChange(e)}/>
+       <TextField label="Paste Long Url" sx={{width: 530, '@media (max-width: 578px)': {
+          width:350},'@media (max-width: 420px)': {
+            width:250},'@media (max-width: 325px)': {
+                width:180}}} required  variant='filled' type='text' name='longUrl' value={longUrl.longUrl} onChange={(e)=>handleChange(e)}/>
 
       {isCustom && <TextField label="Paste Short Url" sx={{width: 530}} required  variant='filled' type='text' name='shortUrl' value={customUrl.shortUrl} onChange={(e)=>handleChange(e)}/>}
 
@@ -84,10 +87,10 @@ const Home = () => {
        <Button variant="text" sx={{ width:100,height:47 ,backgroundColor:"white",color:"#1f354c", "&:hover": {backgroundColor: "#3e5f83",color:"white"}}} onClick={handleCopy}>copy</Button>
        </div>}
 
-      <div className='btn'> <Button variant="contained" sx={{color:"white",backgroundColor:"#1f354c", "&:hover": {backgroundColor: "white",color:"#1f354c"}}} onClick={getUrl}>Short-It</Button> 
-      <Button variant="contained" sx={{color:"white",backgroundColor:"#1f354c", "&:hover": {backgroundColor: "white",color:"#1f354c"}}} onClick={()=>{clearAll()}}>clear</Button>
+      <div className='btn'> <div><Button variant="contained" sx={{color:"white",backgroundColor:"#1f354c", "&:hover": {backgroundColor: "white",color:"#1f354c"}}} onClick={getUrl}>Short-It</Button> 
+      <Button variant="contained" sx={{color:"white",backgroundColor:"#1f354c", "&:hover": {backgroundColor: "white",color:"#1f354c"}}} onClick={()=>{clearAll()}}>clear</Button></div><div>
         <Button variant="contained" sx={{color:"white",backgroundColor:"#1f354c","&:hover": {backgroundColor: "white",color:"#1f354c"}}} onClick={getCustomUrl}>Custom-Link</Button>
-        <Button variant="contained" sx={{color:"white",backgroundColor:"#1f354c","&:hover": {backgroundColor: "white",color:"#1f354c"}}} onClick={seeUrls}>Urls-Analytics</Button> </div>
+        <Button variant="contained" sx={{color:"white",backgroundColor:"#1f354c","&:hover": {backgroundColor: "white",color:"#1f354c"}}} onClick={seeUrls}>View-Urls</Button> </div></div>
         </div>
        </div>
        </>
